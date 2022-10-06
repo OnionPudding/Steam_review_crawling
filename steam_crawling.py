@@ -2,9 +2,6 @@
 !apt-get update
 !apt install chromium-chromedriver
 
-from google.colab import drive
-drive.mount('/content/gdriv')
-
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -22,7 +19,7 @@ options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 
 driver = webdriver.Chrome('chromedriver',options=options)
-url = "https://steamcommunity.com/app/730/reviews/"
+url = "https://steamcommunity.com/app/730/reviews/" # Change url as you please.
 driver.get(url)
 
 review_array = []
